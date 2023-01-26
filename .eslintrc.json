@@ -1,3 +1,49 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+      "react"
+  ],
+  "rules": {
+    "indent": [
+        "error",
+        4
+    ],
+    "linebreak-style": [
+        "error",
+        "unix"
+    ],
+    "quotes": [
+        "error",
+        "double"
+    ],
+    "semi": [
+        "error",
+        "always"
+    ],
+    "eol-last": [
+        "error",
+        "always"
+    ],
+    "no-case-declarations": "off",
+    "object-curly-spacing": [
+        "error",
+        "always"
+    ]
+  }
 }
