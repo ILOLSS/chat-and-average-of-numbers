@@ -19,6 +19,7 @@ const MessageInput = styled.textarea`
     background-color: transparent;
     color: #4E4B4B;
     font-size: 16px;
+    font-family: sans-serif;
     border-radius: 5px;
     border: 1px solid #8E8D8A;
     height: 30px;
