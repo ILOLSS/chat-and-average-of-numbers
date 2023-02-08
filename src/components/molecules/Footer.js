@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "../atoms/Link";
 
 const FooterWrap = styled.footer`
     box-sizing: border-box;
@@ -14,7 +15,9 @@ const FooterWrap = styled.footer`
 function Footer() {
     return (
         <FooterWrap>
-            Footer
+            <Link href="https://github.com/ILOLSS/chat-and-average-of-numbers">
+                repository
+            </Link>
         </FooterWrap>
     );
 }

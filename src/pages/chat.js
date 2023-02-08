@@ -1,4 +1,5 @@
 import React, { createContext } from "react";
+import PropTypes from "prop-types";
 import Page from "@/components/molecules/Page";
 import ChatView from "@/components/molecules/chat/ChatView";
 import SendingMessageView from "@/components/molecules/chat/SendingMessageView";

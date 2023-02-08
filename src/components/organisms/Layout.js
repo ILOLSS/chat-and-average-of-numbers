@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Header from "../molecules/Header";
 import Footer from "../molecules/Footer";
 

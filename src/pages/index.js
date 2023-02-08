@@ -1,16 +1,13 @@
 import styled from "styled-components";
 import TextContainer from "@/components/atoms/conteiners/TextContainer";
 import Page from "@/components/molecules/Page";
+import Link from "@/components/atoms/Link";
 
 const HomePage = styled(Page)`
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   align-items: center;
-`;
-
-const Link = styled.a`
-  text-decoration: none;
 `;
 
 function Home() {

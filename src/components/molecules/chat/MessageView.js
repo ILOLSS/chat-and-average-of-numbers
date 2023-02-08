@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import TextContainer from "@/components/atoms/conteiners/TextContainer";
 import DivColumn from "@/components/atoms/conteiners/DivColumn";
 
