@@ -12,7 +12,11 @@ export default async function setNumber(number) {
             obj.numbers.push({ id: 0, previous: null, current: number, average: null });
             const json = JSON.stringify(obj);
             await fs.promises.writeFile(database_path, json, { encoding: 'utf8' });
-            return;
+            return { 
+                previous: null, 
+                current: number, 
+                average: null 
+            };
         }
         const prev = obj.numbers[0].current;
         const average = (number + prev) / 2;

@@ -16,7 +16,7 @@ const Link = styled.a`
 export default function Home() {
   return (
     <HomePage>
-      <TextContainer isTitle={true}>Created by ILOLSS</TextContainer>
+      <TextContainer justify="center" isTitle={true}>Created by ILOLSS</TextContainer>
       <Link href="https://github.com/ILOLSS">
         <TextContainer isTitle={true}>My GitHub</TextContainer>
       </Link>

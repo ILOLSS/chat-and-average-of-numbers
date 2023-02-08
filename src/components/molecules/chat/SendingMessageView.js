@@ -1,8 +1,10 @@
 import Input from "@/components/atoms/inputs/Input";
 import SendButton from "@/components/atoms/buttons/SendButton";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import DivColumn from "@/components/atoms/conteiners/DivColumn";
+import postMessages from "@/services/api/messages/postMessages";
+import { ChatContext } from "@/pages/chat";
 
 const SendingMessageViewWrap = styled(DivColumn)`
     flex: 1;
@@ -39,6 +41,17 @@ export default function SendingMessageView() {
         setMessage(event.target.value);
     }
 
+    const Send = function() {
+        if (!author || !message) {
+            return;
+        }
+        postMessages(author, message)
+            .then(() => document.location.reload())
+            .catch((error) => console.error(error));
+        setAuthor("");
+        setMessage("");
+    }
+
     return (
         <SendingMessageViewWrap>
             <Input 
@@ -51,7 +64,7 @@ export default function SendingMessageView() {
                 value={message}
                 onInput={onInput}
             />
-            <SendButton onClick={() => console.log(message)}>SEND</SendButton>
+            <SendButton onClick={Send}>SEND</SendButton>
         </SendingMessageViewWrap>
     );
 }

@@ -1,7 +1,7 @@
 import DivColumn from "@/components/atoms/conteiners/DivColumn";
 import DivRow from "@/components/atoms/conteiners/DivRow";
 import TextContainer from "@/components/atoms/conteiners/TextContainer";
-import getNumber from "@/services/api/getNumber";
+import getNumber from "@/services/api/numbers/getNumber";
 import React, { useEffect, useState, useContext } from "react";
 import styled from "styled-components";
 import AverageRow from "./AverageRow";
