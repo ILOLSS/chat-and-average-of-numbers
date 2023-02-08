@@ -11,6 +11,7 @@ const TextContainer = styled(DivRow)`
 `;
 
 TextContainer.propTypes = {
+    justify: PropTypes.string,
     isTitle: PropTypes.bool
 };
 
