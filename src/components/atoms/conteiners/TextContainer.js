@@ -10,4 +10,8 @@ const TextContainer = styled(DivRow)`
     font-weight: ${props => props.isTitle ? "600" : "400"};
 `;
 
+TextContainer.propTypes = {
+    isTitle: PropTypes.bool
+};
+
 export default TextContainer;

@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import Layout from '@/components/organisms/Layout';
 import GlobalStyle from '@/styles/GlobalStyle';
 

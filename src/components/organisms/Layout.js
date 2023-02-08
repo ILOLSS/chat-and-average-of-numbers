@@ -1,12 +1,18 @@
 import Header from "../molecules/Header";
 import Footer from "../molecules/Footer";
 
-export default function Layout({ children }) {
+function Layout({ children }) {
     return (
         <>
             <Header />
-            {children}
+                {children}
             <Footer />
         </>
     );
 }
+
+Layout.propTypes = {
+    children: PropTypes.element.isRequired
+};
+
+export default Layout;

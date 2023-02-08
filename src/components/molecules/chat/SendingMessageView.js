@@ -1,10 +1,9 @@
-import Input from "@/components/atoms/inputs/Input";
-import SendButton from "@/components/atoms/buttons/SendButton";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import DivColumn from "@/components/atoms/conteiners/DivColumn";
+import Input from "@/components/atoms/inputs/Input";
+import SendButton from "@/components/atoms/buttons/SendButton";
 import postMessages from "@/services/api/messages/postMessages";
-import { ChatContext } from "@/pages/chat";
 
 const SendingMessageViewWrap = styled(DivColumn)`
     flex: 1;
@@ -30,7 +29,7 @@ const MessageInput = styled.textarea`
     padding: 5px;
 `;
 
-export default function SendingMessageView() {
+function SendingMessageView() {
 
     const [author, setAuthor] = useState("");
     const [message, setMessage] = useState("");
@@ -68,3 +67,5 @@ export default function SendingMessageView() {
         </SendingMessageViewWrap>
     );
 }
+
+export default SendingMessageView;

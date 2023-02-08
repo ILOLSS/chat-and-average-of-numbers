@@ -1,6 +1,6 @@
+import styled from "styled-components";
 import TextContainer from "@/components/atoms/conteiners/TextContainer";
 import Page from "@/components/molecules/Page";
-import styled from "styled-components";
 
 const HomePage = styled(Page)`
   flex-direction: column;
@@ -13,7 +13,7 @@ const Link = styled.a`
   text-decoration: none;
 `;
 
-export default function Home() {
+function Home() {
   return (
     <HomePage>
       <TextContainer justify="center" isTitle={true}>Created by ILOLSS</TextContainer>
@@ -23,3 +23,5 @@ export default function Home() {
     </HomePage>
   );
 }
+
+export default Home;

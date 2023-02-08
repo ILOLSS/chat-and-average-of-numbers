@@ -18,7 +18,7 @@ const AuthorWrap = styled(TextContainer)`
     justify-content: start;
 `;
 
-export default function MessageView({ author, text }) {
+function MessageView({ author, text }) {
     return (
         <MessageViewWrap>
             <AuthorWrap>{author}</AuthorWrap>
@@ -26,3 +26,10 @@ export default function MessageView({ author, text }) {
         </MessageViewWrap>
     );
 }
+
+MessageView.propTypes = {
+    author: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
+};
+
+export default MessageView;

@@ -1,11 +1,11 @@
+import React, { useEffect, useState, useContext } from "react";
+import { AverageContext } from "@/pages/average";
+import styled from "styled-components";
 import DivColumn from "@/components/atoms/conteiners/DivColumn";
 import DivRow from "@/components/atoms/conteiners/DivRow";
 import TextContainer from "@/components/atoms/conteiners/TextContainer";
-import getNumber from "@/services/api/numbers/getNumber";
-import React, { useEffect, useState, useContext } from "react";
-import styled from "styled-components";
 import AverageRow from "./AverageRow";
-import { AverageContext } from "@/pages/average";
+import getNumber from "@/services/api/numbers/getNumber";
 
 const DivColumnWrap = styled(DivColumn)`
     flex: 3;
@@ -23,7 +23,7 @@ const ListAverageViewWrap = styled(DivColumn)`
     overflow: scroll;
 `;
 
-export default function ListAverageView() {
+function ListAverageView() {
 
     const {numbers, setNumbers} = useContext(AverageContext);
 
@@ -65,3 +65,5 @@ export default function ListAverageView() {
         </DivColumnWrap>
     );
 }
+
+export default ListAverageView;

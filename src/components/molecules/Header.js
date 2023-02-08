@@ -23,7 +23,7 @@ const NickNameWrap = styled.div`
     color: #8E8D8A;
 `;
 
-export default function Header() {
+function Header() {
     return (
         <HeaderWrap>
             <NickNameWrap>ILOLSS</NickNameWrap>
@@ -35,3 +35,5 @@ export default function Header() {
         </HeaderWrap>
     );
 }
+
+export default Header;

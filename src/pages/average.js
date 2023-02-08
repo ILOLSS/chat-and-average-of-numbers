@@ -1,13 +1,11 @@
-import Input from "@/components/atoms/inputs/Input";
-import styled from "styled-components";
+import React, { useState, createContext } from "react";
 import Page from "@/components/molecules/Page";
 import ListAverageView from "@/components/molecules/average/ListAverageView";
 import SendingNumberView from "@/components/molecules/average/SendingNumberView";
-import { useState, createContext } from "react";
 
 export const AverageContext = createContext(null);
 
-export default function Average() {
+function Average() {
 
     const [numbers, setNumbers] = useState(null);
 
@@ -20,3 +18,5 @@ export default function Average() {
         </AverageContext.Provider>
     );
 }
+
+export default Average;

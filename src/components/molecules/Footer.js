@@ -11,10 +11,12 @@ const FooterWrap = styled.footer`
     padding: 0 10px;
 `;
 
-export default function Footer() {
+function Footer() {
     return (
         <FooterWrap>
             Footer
         </FooterWrap>
     );
 }
+
+export default Footer;

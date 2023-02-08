@@ -1,7 +1,7 @@
-import DivRow from "@/components/atoms/conteiners/DivRow";
-import TextContainer from "@/components/atoms/conteiners/TextContainer";
 import React from "react";
 import styled from "styled-components";
+import DivRow from "@/components/atoms/conteiners/DivRow";
+import TextContainer from "@/components/atoms/conteiners/TextContainer";
 
 const AverageRowWrap = styled(DivRow)`
     justify-content: space-around;
@@ -11,7 +11,7 @@ const AverageRowWrap = styled(DivRow)`
     width: 100%;
 `;
 
-export default function AverageRow({ firstCell = "first", secondCell = "second", thirdCell = "third", isTitle = false }) {
+function AverageRow({ firstCell, secondCell, thirdCell, isTitle = false }) {
     return (
         <AverageRowWrap>
             <TextContainer isTitle={isTitle}>{ firstCell }</TextContainer>
@@ -20,3 +20,12 @@ export default function AverageRow({ firstCell = "first", secondCell = "second",
         </AverageRowWrap>
     );
 }
+
+AverageRow.propTypes = {
+    firstCell: PropTypes.string.isRequired,
+    secondCell: PropTypes.string.isRequired,
+    thirdCell: PropTypes.string.isRequired,
+    isTitle: PropTypes.bool
+};
+
+export default AverageRow;

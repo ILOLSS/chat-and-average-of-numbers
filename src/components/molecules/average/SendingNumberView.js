@@ -1,10 +1,10 @@
-import Input from "@/components/atoms/inputs/Input";
-import SendButton from "@/components/atoms/buttons/SendButton";
 import React, { useState, useContext } from "react";
+import { AverageContext } from "@/pages/average";
 import styled from "styled-components";
 import DivColumn from "@/components/atoms/conteiners/DivColumn";
+import Input from "@/components/atoms/inputs/Input";
+import SendButton from "@/components/atoms/buttons/SendButton";
 import postNumber from "@/services/api/numbers/postNumber";
-import { AverageContext } from "@/pages/average";
 import isNumber from "@/database/numbers/helpers/isNumber";
 
 const SendingNumberViewWrap = styled(DivColumn)`
@@ -25,7 +25,7 @@ const NumberInput = styled(Input)`
     }   
 `;
 
-export default function SendingNumberView() {
+function SendingNumberView() {
 
     const {setNumbers} = useContext(AverageContext);
 
@@ -55,3 +55,5 @@ export default function SendingNumberView() {
         </SendingNumberViewWrap>
     );
 }
+
+export default SendingNumberView;

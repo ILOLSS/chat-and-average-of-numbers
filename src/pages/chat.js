@@ -1,8 +1,7 @@
+import React, { createContext } from "react";
+import Page from "@/components/molecules/Page";
 import ChatView from "@/components/molecules/chat/ChatView";
 import SendingMessageView from "@/components/molecules/chat/SendingMessageView";
-import React, { useState, createContext } from "react";
-import styled from "styled-components";
-import Page from "@/components/molecules/Page";
 import getMessages from "@/database/messages/helpers/getMessages";
 
 export async function getServerSideProps() {
@@ -14,7 +13,7 @@ export async function getServerSideProps() {
 
 export const ChatContext = createContext(null);
 
-export default function Chat({ messages }) {
+function Chat({ messages }) {
     return (
         <ChatContext.Provider value={{ messages }}>
             <Page>
@@ -24,3 +23,9 @@ export default function Chat({ messages }) {
         </ChatContext.Provider>
     );
 }
+
+Chat.propTypes = { 
+    messages: PropTypes.arrayOf(PropTypes.object)
+};
+
+export default Chat;
