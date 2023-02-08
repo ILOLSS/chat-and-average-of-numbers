@@ -6,6 +6,7 @@ import styled from "styled-components";
 const AverageRowWrap = styled(DivRow)`
     justify-content: space-around;
     height: 50px;
+    min-height: 50px;
     max-height: 50px;
     width: 100%;
 `;

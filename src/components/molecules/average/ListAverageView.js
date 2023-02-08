@@ -1,8 +1,11 @@
 import DivColumn from "@/components/atoms/conteiners/DivColumn";
 import DivRow from "@/components/atoms/conteiners/DivRow";
-import React from "react";
+import TextContainer from "@/components/atoms/conteiners/TextContainer";
+import getNumber from "@/services/api/getNumber";
+import React, { useEffect, useState, useContext } from "react";
 import styled from "styled-components";
 import AverageRow from "./AverageRow";
+import { AverageContext } from "@/pages/average";
 
 const DivColumnWrap = styled(DivColumn)`
     flex: 3;
@@ -21,6 +24,21 @@ const ListAverageViewWrap = styled(DivColumn)`
 `;
 
 export default function ListAverageView() {
+
+    const {numbers, setNumbers} = useContext(AverageContext);
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setIsLoading(true);
+        getNumber()
+            .then((data) => {
+                setIsLoading(false);
+                setNumbers(data.data.numbers);
+            })
+            .catch((error) => console.error(error));
+    }, []);
+
     return (
         <DivColumnWrap>
             <AverageRow 
@@ -29,12 +47,21 @@ export default function ListAverageView() {
                 secondCell={"current"}
                 thirdCell={"average"}
             />
-            <ListAverageViewWrap>
-                <AverageRow />
-                <AverageRow />
-                <AverageRow />
-                
-            </ListAverageViewWrap>
+            {
+                isLoading
+                ? <DivRow>
+                    <TextContainer>Loading...</TextContainer>
+                </DivRow>
+                : <ListAverageViewWrap>
+                    {numbers.map((element) => 
+                        <AverageRow 
+                            firstCell={element.previous}
+                            secondCell={element.current}
+                            thirdCell={element.average}
+                        />
+                    )}
+                </ListAverageViewWrap>
+            }
         </DivColumnWrap>
     );
 }

@@ -6,6 +6,7 @@ const HomePage = styled(Page)`
   flex-direction: column;
   gap: 10px;
   justify-content: center;
+  align-items: center;
 `;
 
 const Link = styled.a`

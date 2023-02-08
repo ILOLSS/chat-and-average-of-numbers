@@ -11,6 +11,7 @@ export default async function handler(req, res) {
             } catch (error) {
                 res.status(500).json({ message: error.message });
             }
+            break;
         case 'POST':
             if (!isNumber(req.query.number)) {
                 res.status(404).json({ message: 'Invalid number'});
@@ -23,6 +24,7 @@ export default async function handler(req, res) {
             } catch (error) {
                 res.status(500).json({ message: error.message });
             }
+            break;
         default:
             res.status(404).json({ message: 'Not Found' });
     }
