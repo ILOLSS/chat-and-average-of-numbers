@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default async function getNumber() {
-    return axios.get(`http://localhost:3000/api/numbers`);
+    return axios.get(`${process.env.NEXT_PUBLIC_API_HOST}/numbers`);
 }
