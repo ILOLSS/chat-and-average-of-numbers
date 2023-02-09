@@ -1,6 +1,8 @@
-import styled from 'styled-components';
-import Layout from '@/components/organisms/Layout';
-import GlobalStyle from '@/styles/GlobalStyle';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import Layout from "@/components/organisms/Layout";
+import GlobalStyle from "@/styles/GlobalStyle";
 
 const AppWindow = styled.div`
   width: 100vw;
@@ -9,15 +11,22 @@ const AppWindow = styled.div`
   overflow: hidden;
 `;
 
-export default function App({ Component, pageProps }) {
-  return (
-    <>
-      <GlobalStyle />
-      <Layout>
-        <AppWindow>
-          <Component {...pageProps} />
-        </AppWindow>
-      </Layout>
-    </>
-  );
+function App({ Component, pageProps }) {
+    return (
+        <>
+            <GlobalStyle />
+            <Layout>
+                <AppWindow>
+                    <Component {...pageProps} />
+                </AppWindow>
+            </Layout>
+        </>
+    );
 }
+
+App.propTypes = {
+    Component: PropTypes.elementType.isRequired,
+    pageProps: PropTypes.object
+};
+
+export default App;

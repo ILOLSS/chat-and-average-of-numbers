@@ -10,7 +10,7 @@ export async function getServerSideProps() {
     const messages = await getMessages();
 
     return { props: { messages } }; 
-};
+}
 
 export const ChatContext = createContext(null);
 

@@ -25,7 +25,7 @@ const ListAverageViewWrap = styled(DivColumn)`
 
 function ListAverageView() {
 
-    const {numbers, setNumbers} = useContext(AverageContext);
+    const { numbers, setNumbers } = useContext(AverageContext);
 
     const [isLoading, setIsLoading] = useState(true);
 
@@ -37,7 +37,7 @@ function ListAverageView() {
                 setNumbers(data.data.numbers);
             })
             .catch((error) => console.error(error));
-    }, []);
+    }, [setNumbers]);
 
     return (
         <DivColumnWrap>
@@ -49,18 +49,19 @@ function ListAverageView() {
             />
             {
                 isLoading
-                ? <DivRow>
-                    <TextContainer>Loading...</TextContainer>
-                </DivRow>
-                : <ListAverageViewWrap>
-                    {numbers.map((element) => 
-                        <AverageRow 
-                            firstCell={element.previous}
-                            secondCell={element.current}
-                            thirdCell={element.average}
-                        />
-                    )}
-                </ListAverageViewWrap>
+                    ? <DivRow>
+                        <TextContainer>Loading...</TextContainer>
+                    </DivRow>
+                    : <ListAverageViewWrap>
+                        {numbers.map((element) => 
+                            <AverageRow 
+                                key={element.id}
+                                firstCell={element.previous}
+                                secondCell={element.current}
+                                thirdCell={element.average}
+                            />
+                        )}
+                    </ListAverageViewWrap>
             }
         </DivColumnWrap>
     );

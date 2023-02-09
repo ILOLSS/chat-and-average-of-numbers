@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import NavigateButton from "../atoms/buttons/NavigateButton";
 import GappedContainer from "../atoms/conteiners/GappedContainer";

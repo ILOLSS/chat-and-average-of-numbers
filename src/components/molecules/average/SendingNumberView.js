@@ -27,7 +27,7 @@ const NumberInput = styled(Input)`
 
 function SendingNumberView() {
 
-    const {setNumbers} = useContext(AverageContext);
+    const { setNumbers } = useContext(AverageContext);
 
     const [number, setNumber] = useState("");
 
@@ -41,7 +41,7 @@ function SendingNumberView() {
             })
             .catch((error) => console.error(error));
         setNumber("");
-    }
+    };
 
     return (
         <SendingNumberViewWrap>

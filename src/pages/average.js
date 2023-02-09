@@ -10,7 +10,7 @@ function Average() {
     const [numbers, setNumbers] = useState(null);
 
     return (
-        <AverageContext.Provider value={{numbers, setNumbers}}>
+        <AverageContext.Provider value={{ numbers, setNumbers }}>
             <Page>
                 <ListAverageView />
                 <SendingNumberView />

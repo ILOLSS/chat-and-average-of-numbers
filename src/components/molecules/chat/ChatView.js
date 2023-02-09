@@ -14,7 +14,7 @@ const MessageContainer = styled(GappedContainer)`
 
 function ChatView() {
 
-    const {messages} = useContext(ChatContext);
+    const { messages } = useContext(ChatContext);
 
     return (
         <MessageContainer>

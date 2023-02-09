@@ -38,7 +38,7 @@ function SendingMessageView() {
         event.target.style.height = "30px";
         event.target.style.height = `${event.target.scrollHeight}px`;
         setMessage(event.target.value);
-    }
+    };
 
     const Send = function() {
         if (!author || !message) {
@@ -49,7 +49,7 @@ function SendingMessageView() {
             .catch((error) => console.error(error));
         setAuthor("");
         setMessage("");
-    }
+    };
 
     return (
         <SendingMessageViewWrap>
