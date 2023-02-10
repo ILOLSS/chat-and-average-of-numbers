@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Chat and Average of numbers
+
+It is web applaication where users cen send message and get average of two numbers. I used React for frontedn and Node.js for backend. Render chat page using SSR and render average page using CSR.
+
+## Hosting
+
+https://chat-and-average-of-numbers.vercel.app
 
 ## Getting Started
 
