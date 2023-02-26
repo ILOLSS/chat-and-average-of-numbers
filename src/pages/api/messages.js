@@ -1,4 +1,4 @@
-import setMessage from "@/database/messages/helpers/setMessage";
+import setMessage from "@/database/messages/controllers/setMessage";
 
 export default async function handler(req, res) {
     if (!req.query.author) {

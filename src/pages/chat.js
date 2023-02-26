@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Page from "@/components/molecules/Page";
 import ChatView from "@/components/molecules/chat/ChatView";
 import SendingMessageView from "@/components/molecules/chat/SendingMessageView";
-import getMessages from "@/database/messages/helpers/getMessages";
+import getMessages from "@/database/messages/controllers/getMessages";
 
 export async function getServerSideProps() {
 

@@ -1,5 +1,5 @@
-import getNumbers from "@/database/numbers/helpers/getNumbers";
-import setNumber from "@/database/numbers/helpers/setNumber";
+import getNumbers from "@/database/numbers/controllers/getNumbers";
+import setNumber from "@/database/numbers/controllers/setNumber";
 import isNumber from "@/database/numbers/helpers/isNumber";
 
 export default async function handler(req, res) {
