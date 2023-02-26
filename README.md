@@ -1,6 +1,6 @@
 # Chat and Average of numbers
 
-It is web applaication where users cen send message and get average of two numbers. I used React for frontedn and Node.js for backend. Render chat page using SSR and render average page using CSR.
+It is web application where users cen send message and get average of two numbers. I used React for frontedn and Node.js for backend. Render chat page using SSR and render average page using CSR.
 
 ## Hosting
 
